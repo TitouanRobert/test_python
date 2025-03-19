@@ -22,6 +22,7 @@ build-backend = "poetry.core.masonry.api"
 pytest = "^8.3.5"
 isort = "^6.0.1"
 flake8 = "^7.1.2"
+mypy = "^1.15.0"
 
 
 [tool.pytest.ini_options]
@@ -34,3 +35,9 @@ per-file-ignores = """
         __init__.py: F401
         ./src/*: E402
     """
+
+[tool.mypy]
+warn_unused_configs = true
+disallow_untyped_calls = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
