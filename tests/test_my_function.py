@@ -1,5 +1,4 @@
-from lib import to_test
-from lib import numpy_vect
+from lib import numpy_vect, to_test
 
 
 def test_to_test():
