@@ -9,7 +9,8 @@ license = {text = "MIT"}
 
 requires-python = ">=3.11"
 dependencies = [
-    "numpy (>=2.2.4,<3.0.0)"
+    "numpy (>=2.2.4,<3.0.0)",
+    "flake8-pyproject (>=1.2.3,<2.0.0)"
 ]
 
 
@@ -20,8 +21,16 @@ build-backend = "poetry.core.masonry.api"
 [tool.poetry.group.dev.dependencies]
 pytest = "^8.3.5"
 isort = "^6.0.1"
+flake8 = "^7.1.2"
 
 
 [tool.pytest.ini_options]
 testpaths = ["tests"]  # Chemin vers le répertoire des tests
 addopts = "-ra -q"  # Affiche les résultats de manière concise
+
+
+[tool.flake8]
+per-file-ignores = """
+        __init__.py: F401
+        ./src/*: E402
+    """
