@@ -1,0 +1,26 @@
+[project]
+name = "test_python"
+version = "0.1.0"
+description = "Test of all developpement python feature"
+authors = [
+    {name = "Titouan Robert",email = "you@example.com"}
+]
+license = {text = "MIT"}
+
+requires-python = ">=3.11"
+dependencies = [
+    "numpy (>=2.2.4,<3.0.0)"
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.5"
+
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]  # Chemin vers le répertoire des tests
+addopts = "-ra -q"  # Affiche les résultats de manière concise
