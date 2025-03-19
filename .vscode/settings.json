@@ -1,0 +1,27 @@
+{
+    "python.linting.flake8Enabled": true, // Active Flake8
+    "PYDEVD_WARN_SLOW_RESOLVE_TIMEOUT": "10",
+    "launch": {
+        "configurations": []
+    },
+    "explorer.confirmDelete": false,
+    "editor.formatOnSave": true,
+    "[python]": {
+        "editor.defaultFormatter": "ms-python.black-formatter"
+    },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "explicit"
+    },
+    "python.sortImports.args": [
+        "--profile",
+        "black"
+    ],
+    "git.enableSmartCommit": true,
+    "git.confirmSync": false,
+    "python.linting.mypyEnabled": true, // Active mypy comme linter
+    "python.linting.mypyPath": "poetry run mypy", // Utilise poetry si tu as un environnement Poetry
+    "python.linting.mypyArgs": [
+        "--config-file",
+        "pyproject.toml" // Utilise pyproject.toml pour la configuration
+    ],
+}
